@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saikat Bonik Real-time Blog</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+<header>Saikat Bonik Blog</header>
+<button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Categories</a>
+<a href="#">Contact</a>
+</nav>
+<div class="add-post-form">
+<h3>Add / Edit Post</h3>
+<input type="text" id="postTitle" placeholder="Post Title">
+<input type="text" id="postCategory" placeholder="Category">
+<input type="text" id="postTags" placeholder="Tags (comma separated)">
+<textarea id="postContent" rows="4" placeholder="Post Content"></textarea>
+<button onclick="addOrEditPost()">Add / Update Post</button>
+</div>
+<div class="search-bar">
+<input type="text" id="searchInput" placeholder="Search posts...">
+<button onclick="searchPosts()">Search</button>
+</div>
+<div class="filter-bar" id="filterBar"></div>
+<div class="container" id="postsContainer"></div>
+<div style="text-align:center;margin:20px;">
+<button onclick="loadMore()" id="loadMoreBtn">Load More</button>
+</div>
+<footer>&copy; 2025 Saikat Bonik. All rights reserved.</footer>
+<script src="app.js"></script>
+</body>
+</html>
